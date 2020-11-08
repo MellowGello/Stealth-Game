@@ -24,14 +24,20 @@ public class PlayerMove : MonoBehaviour
 
     float horizontal = 0;
     float vertical = 0;
+    public float JumpScale = 1;
 
     bool Caught;
     bool Crouch;
+    public bool Grounded = true;
+
+    bool Switch = false;
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        SwitchingWorld.SwitchWorld += Switching;
+        UI.ForceBack += Switching;
     }
 
    
@@ -63,7 +69,7 @@ public class PlayerMove : MonoBehaviour
         if (inputDirection.magnitude >= 0.1f)
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) & Switch)
             {
                 velocity = moveDir * SprintSpeed;
                 Crouch = false;
@@ -80,7 +86,12 @@ public class PlayerMove : MonoBehaviour
         else
         {
             velocity = Vector3.zero;
-            //new Vector3(0, rb.velocity.y, 0)
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && Switch && Grounded)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, JumpScale, rb.velocity.z);
+            Grounded = false;
         }
     }
 
@@ -117,5 +128,15 @@ public class PlayerMove : MonoBehaviour
                 PlayerIsCaught();
             }
         }
+
+        if (collide.gameObject.CompareTag("Ground"))
+        {
+            Grounded = true;
+        }
+    }
+
+    void Switching()
+    {
+        Switch = !Switch;
     }
 }
