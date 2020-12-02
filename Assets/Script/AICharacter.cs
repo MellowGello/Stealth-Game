@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class AICharacter : MonoBehaviour
 {
-    public Transform other;
-
     public AIState currentState;
+
+    public GameObject Player;
+
+    public Transform[] points;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.FindWithTag("Player");
+
+       
+
         currentState = new IdleState();
 
 
@@ -20,9 +27,6 @@ public class AICharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.Rotate(0, 5, 0);
-        //other.position += new Vector3(0.5f, 0.5f, 0.5f);
-
         currentState.UpdateState(this);
     }
 }

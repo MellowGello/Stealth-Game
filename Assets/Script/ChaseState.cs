@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ChaseState : AIState
 {
-    public GameObject Player;
 
     int MoveSpeed = 4;
     int MaxDistance = 20;
@@ -18,19 +17,18 @@ public class ChaseState : AIState
     {
 
         //look towards the player
-        Player = GameObject.FindWithTag("Player");
-        owner.transform.LookAt(Player.transform);
+        owner.transform.LookAt(owner.Player.transform);
 
-        Debug.Log(Player.name);
+        //Debug.Log(Player.name);
 
 
         //move towards the player
         //AI postition
         //Player position
 
-        owner.transform.position = Vector3.MoveTowards(owner.transform.position, Player.transform.position, 1 * Time.deltaTime);
+        owner.transform.position = Vector3.MoveTowards(owner.transform.position, owner.Player.transform.position, 5 * Time.deltaTime);
 
-        float distance = Vector3.Distance(Player.transform.position, owner.transform.position);
+        float distance = Vector3.Distance(owner.Player.transform.position, owner.transform.position);
 
         if (distance <= 2)
         {
