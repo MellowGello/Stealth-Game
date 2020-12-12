@@ -19,6 +19,11 @@ public class EnemyAnimation : MonoBehaviour
         an.SetFloat("Speed",test);
         an.SetBool("playerSpotted", EMScript.playerSpotted);
         an.SetBool("Stop", EMScript.stop);
+    }
 
+    public void dieAnimation()
+    {
+        an.SetTrigger("die");
+        an.SetBool("Dead", true);
     }
 }

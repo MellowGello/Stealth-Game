@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
     bool Crouch;
     public bool Grounded = true;
 
-    bool Switch = false;
+    public bool Switch = false;
     
     void Start()
     {
@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
             Crouch = !Crouch;
         }
         
-        if (!Caught)
+        if (!(Caught | GetComponent<PlayerKill>().action))
         {
             horizontal = Input.GetAxisRaw("Horizontal");
             vertical = Input.GetAxisRaw("Vertical");
@@ -102,8 +102,11 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MoveRotation(Quaternion.Euler(Vector3.up * angle));
-        rb.MovePosition(rb.position + velocity * Time.deltaTime);
+        if (!GetComponent<PlayerKill>().action)
+        {
+            rb.MoveRotation(Quaternion.Euler(Vector3.up * angle));
+            rb.MovePosition(rb.position + velocity * Time.deltaTime);
+        }  
     }
 
     void OnTriggerEnter(Collider collision)

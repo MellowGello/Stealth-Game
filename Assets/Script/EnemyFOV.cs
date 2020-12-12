@@ -26,6 +26,7 @@ public class EnemyFOV : MonoBehaviour
 
     public MeshFilter viewMeshFilter;
     public MeshRenderer colorSet;
+    public GameObject visualizer;
 
     public Material spotTex;
     public Material idleTex;
@@ -35,7 +36,7 @@ public class EnemyFOV : MonoBehaviour
     Mesh viewMesh;
 
     public float spotTimer = .5f;
-    float playerSpottedTimer = 0;
+    public float playerSpottedTimer = 0;
 
     private void Start()
     {
@@ -82,6 +83,11 @@ public class EnemyFOV : MonoBehaviour
         {
             playerIsSpotted = true;
         }
+
+        if (this.CompareTag("Untagged"))
+        {
+            visualizer.SetActive(false);
+        }
     } 
 
     void InViewTargets()
@@ -106,23 +112,6 @@ public class EnemyFOV : MonoBehaviour
             }
         }
     }
-
-    /*bool CanSeePlayer()
-    {
-        if(Vector3.Distance(transform.position,player.position) < Radius)
-        {
-            Vector3 dirToPlayer = (player.position - transform.position).normalized;
-            float angleBetweenGuardAndplayer = Vector3.Angle(transform.forward, dirToPlayer);
-            if(angleBetweenGuardAndplayer < Angle / 2f)
-            {
-                if(!Physics.Linecast(transform.position, player.position, obstacle))
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }*/
 
     void DrawFieldOfView()
     {

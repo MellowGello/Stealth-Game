@@ -6,6 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     public Transform path;
     public GameObject player;
+    public EnemyAnimation EAScript;
 
     public EnemyFOV FOVScript;
     public float moveSpeed = 5;
@@ -15,9 +16,16 @@ public class EnemyMove : MonoBehaviour
     public bool stop;
     public Vector3 movePosition;
 
+    public bool ded;
+    public bool disable;
+
+    public float RealKTime = 2f;
+    public float AstralKTime = 4f;
+
     void Start()
     {
         Vector3[] waypoints = new Vector3[path.childCount];
+        EAScript = GetComponent<EnemyAnimation>();
         for (int i = 0; i < waypoints.Length; i++)
         {
             waypoints[i] = path.GetChild(i).position;
@@ -33,17 +41,22 @@ public class EnemyMove : MonoBehaviour
         {
             playerSpotted = true;
         }
+        if (ded)
+        {
+            playerSpotted = false;
+        }
     }
 
     IEnumerator FollowPath(Vector3[] waypoints)
-    {
+    { 
+
         transform.position = waypoints[0];
 
         int targetWaypointIndex = 1;
         Vector3 targetWaypoints = waypoints[targetWaypointIndex];
         transform.LookAt(targetWaypoints);
 
-        while (!playerSpotted)
+        while (!playerSpotted & !ded & !disable)
         {
             movePosition = Vector3.MoveTowards(transform.position, targetWaypoints, moveSpeed * Time.deltaTime);
             transform.position = movePosition;
@@ -67,6 +80,8 @@ public class EnemyMove : MonoBehaviour
         {
             yield return null;
         }
+
+        yield return null;
     }
 
     IEnumerator TurnToFace(Vector3 lookTarget)
@@ -74,7 +89,7 @@ public class EnemyMove : MonoBehaviour
         Vector3 dirToLookTarget = (lookTarget - transform.position).normalized;
         float targetAngle = 90 - Mathf.Atan2(dirToLookTarget.z, dirToLookTarget.x) * Mathf.Rad2Deg;
 
-        if (!playerSpotted)
+        if (!playerSpotted & !disable & !ded)
         {
             while (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.y, targetAngle)) > 0.05f)
             {
@@ -96,5 +111,12 @@ public class EnemyMove : MonoBehaviour
             previousPath = waypoint.position;
         }
         Gizmos.DrawLine(previousPath, startPath);
+    }
+
+    public void DeadFunc()
+    {
+        this.gameObject.tag = "Untagged";
+        ded = true;
+        EAScript.dieAnimation();
     }
 }

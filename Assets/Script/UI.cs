@@ -12,8 +12,10 @@ public class UI : MonoBehaviour
 
     public GameObject WinUI;
     public GameObject LoseUI;
+    public GameObject killUI;
     bool GameOver;
     PlayerMove playerScript;
+    PlayerKill killScript;
 
     bool Switching;
     
@@ -21,6 +23,7 @@ public class UI : MonoBehaviour
     {
         slider = sliderObj.GetComponent<Slider>();
         playerScript = FindObjectOfType<PlayerMove>();
+        killScript = FindObjectOfType<PlayerKill>();
         playerScript.PlayerHasWon += YouWin;
         playerScript.PlayerIsCaught += YouLose;
         SwitchingWorld.SwitchWorld += Switch;
@@ -42,6 +45,7 @@ public class UI : MonoBehaviour
         }
 
         StaminaDrain(Time.deltaTime);
+        killDetect();
     }
 
     void YouLose()
@@ -93,6 +97,18 @@ public class UI : MonoBehaviour
             {
                 sliderObj.SetActive(false);
             }
+        }
+    }
+
+    public void killDetect()
+    {
+        if(killScript.enemies.Count > 0)
+        {
+            killUI.SetActive(true);
+        }
+        else
+        {
+            killUI.SetActive(false);
         }
     }
 }
