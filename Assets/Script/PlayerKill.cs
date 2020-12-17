@@ -9,7 +9,7 @@ public class PlayerKill : MonoBehaviour
     public LayerMask deadMask;
     public float counter;
     public bool action;
-    public List<EnemyMove> enemies = new List<EnemyMove>();
+    public List<PatrolState> enemies = new List<PatrolState>();
     float temp = 1;
     void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerKill : MonoBehaviour
         {
             if (target[i].gameObject.CompareTag("Enemy"))
             {
-                enemies.Add(target[i].GetComponent<EnemyMove>());
+                enemies.Add(target[i].GetComponent<PatrolState>());
             }
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -56,7 +56,7 @@ public class PlayerKill : MonoBehaviour
         {
             counter = 0;
             action = false;
-            enemies[0].DeadFunc();
+            //enemies[0].DeadFunc();
         }
     }
 

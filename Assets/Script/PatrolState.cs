@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class PatrolState : AIState
 {
     public Transform path;
     public GameObject player;
@@ -12,19 +12,24 @@ public class EnemyMove : MonoBehaviour
     public float moveSpeed = 5;
     public float turnSpeed = 90;
     public float pause = .5f;
-    public bool playerSpotted;
-    public bool stop;
+
     public Vector3 movePosition;
 
     public bool ded;
     public bool disable;
+    public bool stop;
+    public bool playerSpotted;
 
     public float RealKTime = 2f;
     public float AstralKTime = 4f;
 
+    public Vector3[] waypoints;
+    Vector3 targetWaypoints;
+    int targetWaypointIndex = 1;
+
     void Start()
     {
-        Vector3[] waypoints = new Vector3[path.childCount];
+        waypoints = new Vector3[path.childCount];
         EAScript = GetComponent<EnemyAnimation>();
         for (int i = 0; i < waypoints.Length; i++)
         {
@@ -32,55 +37,32 @@ public class EnemyMove : MonoBehaviour
             waypoints[i] = new Vector3(waypoints[i].x, transform.position.y, waypoints[i].z);
         }
 
-        StartCoroutine(FollowPath(waypoints));
-    }
-
-    private void Update()
-    {
-        if (FOVScript.playerIsSpotted)
-        {
-            playerSpotted = true;
-        }
-        if (ded)
-        {
-            playerSpotted = false;
-        }
-    }
-
-    IEnumerator FollowPath(Vector3[] waypoints)
-    { 
         transform.position = waypoints[0];
 
-        int targetWaypointIndex = 1;
-        Vector3 targetWaypoints = waypoints[targetWaypointIndex];
+        targetWaypoints = waypoints[targetWaypointIndex];
         transform.LookAt(targetWaypoints);
+    }
 
-        while (!playerSpotted & !ded & !disable)
+    public override void UpdateState(AICharacter owner)
+    {
+        if(!playerSpotted & !ded & !disable)
         {
-            movePosition = Vector3.MoveTowards(transform.position, targetWaypoints, moveSpeed * Time.deltaTime);
-            transform.position = movePosition;
-            if (transform.position == targetWaypoints)
+            movePosition = Vector3.MoveTowards(owner.transform.position, targetWaypoints, moveSpeed * Time.deltaTime);
+            owner.transform.position = movePosition;
+            if (owner.transform.position == targetWaypoints)
             {
                 targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
                 targetWaypoints = waypoints[targetWaypointIndex];
                 stop = true;
-                yield return new WaitForSeconds(pause);
 
-                yield return StartCoroutine(TurnToFace(targetWaypoints));
+                StartCoroutine(TurnToFace(targetWaypoints));
             }
-            else
-            {
-                stop = false;
-            }
-            yield return null;
         }
 
-        while (playerSpotted)
+        if (playerSpotted)
         {
-            yield return null;
+            owner.currentState = new ChaseState();
         }
-
-        yield return null;
     }
 
     IEnumerator TurnToFace(Vector3 lookTarget)
@@ -97,25 +79,5 @@ public class EnemyMove : MonoBehaviour
                 yield return null;
             }
         }
-    }
-
-    void OnDrawGizmos()
-    {
-        Vector3 startPath = path.GetChild(0).position;
-        Vector3 previousPath = startPath;
-        foreach (Transform waypoint in path)
-        {
-            Gizmos.DrawSphere(waypoint.position, .2f);
-            Gizmos.DrawLine(previousPath, waypoint.position);
-            previousPath = waypoint.position;
-        }
-        Gizmos.DrawLine(previousPath, startPath);
-    }
-
-    public void DeadFunc()
-    {
-        this.gameObject.tag = "Untagged";
-        ded = true;
-        EAScript.dieAnimation();
     }
 }

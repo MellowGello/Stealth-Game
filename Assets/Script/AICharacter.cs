@@ -19,7 +19,7 @@ public class AICharacter : MonoBehaviour
 
        
 
-        currentState = new IdleState();
+        currentState = new PatrolState();
 
 
     }
