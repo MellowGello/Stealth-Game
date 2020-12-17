@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAnimation : MonoBehaviour
 {
     public Animator an;
-    public PatrolState EMScript;
+    public EnemyMove EMScript;
     public float test;
     void Start()
     {

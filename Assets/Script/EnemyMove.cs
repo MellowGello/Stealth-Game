@@ -24,6 +24,7 @@ public class EnemyMove : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         Vector3[] waypoints = new Vector3[path.childCount];
         EAScript = GetComponent<EnemyAnimation>();
         for (int i = 0; i < waypoints.Length; i++)

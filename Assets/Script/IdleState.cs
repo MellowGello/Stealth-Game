@@ -9,7 +9,7 @@ public class IdleState : AIState
     int index = 0;
     public override void UpdateState(AICharacter owner)
     {
-        owner.transform.position = Vector3.MoveTowards(owner.transform.position, owner.points[index].position, 10 * Time.deltaTime);
+        owner.transform.position = Vector3.MoveTowards(owner.transform.position, owner.points[index].position, 2.5f * Time.deltaTime);
 
         if (owner.points[index].position == owner.transform.position)
         {

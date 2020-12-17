@@ -10,6 +10,7 @@ public class AICharacter : MonoBehaviour
 
     public Transform[] points;
 
+    public GameObject Path;
 
 
     // Start is called before the first frame update
@@ -17,7 +18,8 @@ public class AICharacter : MonoBehaviour
     {
         Player = GameObject.FindWithTag("Player");
 
-       
+       points = Path.GetComponentsInChildren<Transform>();
+
 
         currentState = new PatrolState();
 

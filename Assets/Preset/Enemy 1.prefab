@@ -492,10 +492,8 @@ GameObject:
   - component: {fileID: 3701256772853266773}
   - component: {fileID: 3701256772853266769}
   - component: {fileID: 1835410145}
+  - component: {fileID: 8293573886702181429}
   - component: {fileID: 1652319441}
-  - component: {fileID: 1932098891894588064}
-  - component: {fileID: 5925018688593294645}
-  - component: {fileID: 6235091914985189782}
   m_Layer: 9
   m_Name: Guard
   m_TagString: Enemy
@@ -579,8 +577,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   an: {fileID: 3701256772784633087}
-  EMScript: {fileID: 6235091914985189782}
+  EMScript: {fileID: 8293573886702181429}
   test: 0
+--- !u!114 &8293573886702181429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701256772853266794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfd11e5f0a1b8141a814c80e4f958ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 3701256773707879507}
+  player: {fileID: 0}
+  EAScript: {fileID: 1835410145}
+  FOVScript: {fileID: 3701256772853266769}
+  moveSpeed: 5
+  turnSpeed: 90
+  pause: 0.5
+  playerSpotted: 0
+  stop: 0
+  movePosition: {x: 0, y: 0, z: 0}
+  ded: 0
+  disable: 0
+  RealKTime: 2
+  AstralKTime: 4
 --- !u!114 &1652319441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,59 +620,6 @@ MonoBehaviour:
   target: {fileID: 0}
   detectBar: {fileID: 66605743}
   FOVScript: {fileID: 3701256772853266769}
---- !u!114 &1932098891894588064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701256772853266794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15fc2f237aeaa1b40ae2ed36852201ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5925018688593294645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701256772853266794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347d3d2b00004dc4d9d03f138c8774e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: {fileID: 0}
-  Player: {fileID: 0}
-  points: []
---- !u!114 &6235091914985189782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701256772853266794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ba03f68382b904fa06ca78aa885815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  path: {fileID: 3701256773707879507}
-  player: {fileID: 0}
-  EAScript: {fileID: 1835410145}
-  FOVScript: {fileID: 3701256772853266769}
-  moveSpeed: 5
-  turnSpeed: 90
-  pause: 0.5
-  movePosition: {x: 0, y: 0, z: 0}
-  ded: 0
-  disable: 0
-  stop: 0
-  playerSpotted: 0
-  RealKTime: 2
-  AstralKTime: 4
 --- !u!1 &3701256773354829905
 GameObject:
   m_ObjectHideFlags: 0

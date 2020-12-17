@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class EnemyDetec : MonoBehaviour
 {
-    public Transform target;
+    public GameObject target;
     public GameObject detectBar;
     public EnemyFOV FOVScript;
     Slider slider;
     float value;
     void Start()
     {
+        target = GameObject.FindWithTag("MainCamera");
         slider = detectBar.GetComponent<Slider>();
         detectBar.SetActive(false);
     }
@@ -31,6 +32,6 @@ public class EnemyDetec : MonoBehaviour
             detectBar.SetActive(true);
         }
 
-        detectBar.transform.LookAt(target);
+        detectBar.transform.LookAt(target.transform);
     }
 }
