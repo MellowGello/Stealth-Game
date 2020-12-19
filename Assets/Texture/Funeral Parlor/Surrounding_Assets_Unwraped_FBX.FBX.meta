@@ -3,7 +3,47 @@ guid: 8388f2883820c7b40af711e735d323d3
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffin 1
+    second: {fileID: 2100000, guid: b00086d9a3923e745a68bade174c1ca7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffin 2
+    second: {fileID: 2100000, guid: 32785da80cbb81346a191f3d81ebae76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Death Coach
+    second: {fileID: 2100000, guid: 704ca30cd14eb764891dc36429a290b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shovel 1
+    second: {fileID: 2100000, guid: 5d6fa4d88b2eb304d952986553e9a459, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shovel 2
+    second: {fileID: 2100000, guid: 5d6fa4d88b2eb304d952986553e9a459, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tombstone 1
+    second: {fileID: 2100000, guid: 899b5b404b9abb64d9eada4b7f26e96c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tombstone 2
+    second: {fileID: 2100000, guid: f0effae417d1f174da01f3021d9275b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel
+    second: {fileID: 2100000, guid: 2364dcdcc8ce62c42a4e52095c9a93e1, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -36,7 +76,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

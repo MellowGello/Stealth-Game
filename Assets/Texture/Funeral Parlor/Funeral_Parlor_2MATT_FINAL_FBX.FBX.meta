@@ -3,7 +3,17 @@ guid: 728888bbbe5343b43afbd838364e4648
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Four Walls
+    second: {fileID: 2100000, guid: 82677f24f85408345a63fdb3cf24c53b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parlor
+    second: {fileID: 2100000, guid: d2806d6a0f68ec040a6df07cfae8f59d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -36,7 +46,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

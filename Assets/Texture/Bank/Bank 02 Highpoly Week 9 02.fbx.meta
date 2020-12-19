@@ -3,7 +3,202 @@ guid: 32129d4c48c3ba14996c0e9864323f98
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02
+    second: {fileID: 2100000, guid: 18fb5b83d6bd7d7438d2be691e4add3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Bell
+    second: {fileID: 2100000, guid: 627cad211eade4f4db2700386b1406cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Door Handle 001
+    second: {fileID: 2100000, guid: f835e3b60780b79498b15327e37b4dcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Door Handle 002
+    second: {fileID: 2100000, guid: f835e3b60780b79498b15327e37b4dcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Support 001
+    second: {fileID: 2100000, guid: 3e7f4b3ccaefdc5448320e97ff2640bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Support 002
+    second: {fileID: 2100000, guid: 5773cf48e077e4a41a9a573c9dae5a64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Support 003
+    second: {fileID: 2100000, guid: de5184b9df9c5414a8558e98c97f2d83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Support 004
+    second: {fileID: 2100000, guid: 6a25b7d084967a14ebf0a463e31cfbed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Support 005
+    second: {fileID: 2100000, guid: 9ff5d728610252f4791ef0fbde645fd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank 02 Support 006
+    second: {fileID: 2100000, guid: d0710504156e53740990255ec1d30d78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bank02 text
+    second: {fileID: 2100000, guid: 0653e315b6d5a0f49bb1c79466856240, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barrel 002
+    second: {fileID: 2100000, guid: 9eac16dde2fc68d448a03bfbde0335ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 002
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 003
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 004
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 005
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 006
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 007
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 008
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 009
+    second: {fileID: 2100000, guid: 0bea808c3f8e73f4ebe2ac66201e05a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair Long 001
+    second: {fileID: 2100000, guid: dc5338fb85019fe4eac760392544d668, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair Long 002
+    second: {fileID: 2100000, guid: 82a5bd40bafd2bf40960bacd0a45c737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair Long 007
+    second: {fileID: 2100000, guid: 82a5bd40bafd2bf40960bacd0a45c737, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door Bank 02
+    second: {fileID: 2100000, guid: b25ee5f60f76e064fad8081eac8d1cde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Horse Hitch 001
+    second: {fileID: 2100000, guid: e07dd217b47fc6048bb28d7f5dddc7bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Horse Hitch 003
+    second: {fileID: 2100000, guid: 6c7c70f845771ac4d9fa7304e1732ea9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sack 001
+    second: {fileID: 2100000, guid: 65c87050f16f86145b860d7e7cec31cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sack 002
+    second: {fileID: 2100000, guid: 65c87050f16f86145b860d7e7cec31cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sack 003
+    second: {fileID: 2100000, guid: 65c87050f16f86145b860d7e7cec31cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign 001
+    second: {fileID: 2100000, guid: 8e828bfcad69b0c4ead4abcfe3c94bd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign Big 002
+    second: {fileID: 2100000, guid: 9538b0a0bc7c5a141b64fd11c503f646, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 004
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 005
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 006
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 007
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 008
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 009
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 010
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window 011
+    second: {fileID: 2100000, guid: 03505dae02e77a3449bc0781eff9e97b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
