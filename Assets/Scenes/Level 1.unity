@@ -12812,11 +12812,11 @@ Terrain:
   m_HeightmapPixelError: 1
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
+  m_ShadowCastingMode: 0
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 0
   m_MaterialTemplate: {fileID: 2100000, guid: 8f4482e19b3529247b80e2f519b80e27, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
@@ -15774,7 +15774,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9528302, g: 0.92428476, b: 0.7856355, a: 1}
   m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
@@ -15814,7 +15814,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -20052,10 +20052,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1888279671531477076, guid: 69bde656d3be6934c9be9dbe361a698f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbca2d8dddfc527488c13f277d9d7f55, type: 2}
     - target: {fileID: 919132149155446097, guid: 69bde656d3be6934c9be9dbe361a698f, type: 3}
       propertyPath: m_Name
       value: TheJudge_Character_Animations_[updated]
       objectReference: {fileID: 0}
+    - target: {fileID: 7727208037484685053, guid: 69bde656d3be6934c9be9dbe361a698f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b1be2dfa476d2e4aa8ab24940ca08a9, type: 2}
+    - target: {fileID: 8110347091352251057, guid: 69bde656d3be6934c9be9dbe361a698f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c83cc3e2210efb4fa2dc860c8bb4e3b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69bde656d3be6934c9be9dbe361a698f, type: 3}
 --- !u!1 &1825438024
