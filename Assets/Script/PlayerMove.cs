@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     float horizontal = 0;
     float vertical = 0;
-    public float JumpScale = 1;
+    //public float JumpScale = 1;
 
     bool Caught;
     bool Crouch;
@@ -88,11 +88,11 @@ public class PlayerMove : MonoBehaviour
             velocity = Vector3.zero;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && Switch && Grounded)
+        /*if (Input.GetKeyDown(KeyCode.E) && Switch && Grounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, JumpScale, rb.velocity.z);
             Grounded = false;
-        }
+        }*/
     }
 
     void Disabled()

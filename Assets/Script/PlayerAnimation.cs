@@ -35,7 +35,7 @@ public class PlayerAnimation : MonoBehaviour
             an.SetFloat("Speed", speed);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && InAstral)
+        /*if (Input.GetKeyDown(KeyCode.E) && InAstral)
         {
             an.SetBool("Jump", true);
         }
@@ -48,7 +48,7 @@ public class PlayerAnimation : MonoBehaviour
         {
             Grounded = false;
             an.SetBool("Ground", false);
-        }
+        }*/
     }
 
     void Switch()
