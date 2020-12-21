@@ -30515,9 +30515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b48c0364672b643ade3b8870aa91c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 3
-  CrouchSpeed: 1
-  SprintSpeed: 8
+  MoveSpeed: 1.5
+  CrouchSpeed: 0.5
+  SprintSpeed: 4
   smoothMoveTime: 0.1
   turnSpeed: 4
   cam: {fileID: 279395683}
